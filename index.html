@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKA — Internet Speed Test</title>
+  <meta name="description" content="AKA is a fast and simple internet speed test.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header>
+    <a class="logo" href="/">AKA</a>
+    <nav>
+      <a class="active" href="/">Home</a>
+      <a href="#test">Speed Test</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="live"><i></i><span id="status">READY</span></div>
+  </header>
+
+  <main>
+    <section class="hero" id="test">
+      <p class="eyebrow">SPEED BEYOND LIMITS</p>
+      <h1>AKA</h1>
+      <p class="hero-title">INTERNET SPEED TEST</p>
+      <p class="tagline">Simple. Fast. Accurate.</p>
+
+      <div class="test-area">
+        <div class="side-result">
+          <div class="arrow">↓</div>
+          <span>DOWNLOAD</span>
+          <strong id="download">--</strong>
+          <small>Mbps</small>
+        </div>
+
+        <button id="goBtn" class="go-button" aria-label="Start speed test">
+          <span id="phase">GO</span>
+          <small id="phaseSub">START TEST</small>
+          <svg viewBox="0 0 240 240" aria-hidden="true">
+            <circle class="ring-bg" cx="120" cy="120" r="108"/>
+            <circle id="ring" class="ring" cx="120" cy="120" r="108"/>
+          </svg>
+        </button>
+
+        <div class="side-result">
+          <div class="arrow">↑</div>
+          <span>UPLOAD</span>
+          <strong id="upload">--</strong>
+          <small>Mbps</small>
+        </div>
+      </div>
+
+      <div class="live-speed">
+        <span id="speed">0.00</span><small> Mbps</small>
+      </div>
+
+      <div class="latency">
+        <div><span>ϟ</span><b>PING</b><strong id="ping">--</strong><small>ms</small></div>
+        <i></i>
+        <div><span>〰</span><b>JITTER</b><strong id="jitter">--</strong><small>ms</small></div>
+      </div>
+    </section>
+
+    <section class="connection">
+      <div>
+        <span class="icon">◎</span>
+        <p>YOUR IP</p>
+        <strong id="ip">Detecting...</strong>
+      </div>
+      <div>
+        <span class="icon">◒</span>
+        <p>ISP / NETWORK</p>
+        <strong id="isp">Detecting...</strong>
+      </div>
+      <div>
+        <span class="icon">⌖</span>
+        <p>LOCATION</p>
+        <strong id="location">Detecting...</strong>
+      </div>
+    </section>
+
+    <section class="history" id="about">
+      <div class="history-head"><h2>RECENT TESTS</h2><button id="clearHistory">CLEAR</button></div>
+      <div id="historyList"><p>No completed tests yet.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>AKA</strong>
+    <span>Faster Connections. A Better You.</span>
+    <span>© <span id="year"></span> AKA</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
